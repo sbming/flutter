@@ -8,18 +8,18 @@ import 'layout.dart';
 void main(){
   runApp(MaterialApp(
       title:'welcome to flutter',
-      home:new MyApp()
+      home:MyApp()
   ));
 }
 
 class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context){
-    return new Scaffold(
+    return Scaffold(
       appBar: AppBar(title:Text('flutter Demo')),
-      body: new Container(
+      body: Container(
         margin: const EdgeInsets.only(left: 10.0, right: 10.0),
-        child:new Row(
+        child:Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children:[
             navigatorButton(context, 'initExample', initProject()),
