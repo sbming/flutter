@@ -22,9 +22,9 @@ class MyApp extends StatelessWidget{
         child:new Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children:[
-            navigatorButton(context, 'initExample', initProject()),
-            navigatorButton(context, 'example01', example01()),
-            navigatorButton(context, 'layout', layout()),
+            navigatorButton(context, 'initExample', InitProject()),
+            navigatorButton(context, 'example01', Example01()),
+            navigatorButton(context, 'layout', Layout()),
           ]
         )
       )
