@@ -29,10 +29,10 @@ class MyApp extends StatelessWidget{
       maxCrossAxisExtent: 130.0,
       padding: const EdgeInsets.all(4.0),
       children:[
-        navigatorButton(context, 'initExample', initProject()),
-        navigatorButton(context, 'example01', example01()),
-        navigatorButton(context, 'layout', layout()),
-        navigatorButton(context, 'navigator', navigator()),
+        navigatorButton(context, 'initExample', InitProject()),
+        navigatorButton(context, 'example01', Example01()),
+        navigatorButton(context, 'layout', Layout()),
+        navigatorButton(context, 'navigator', NavigatorTest()),
       ],
     );
   }

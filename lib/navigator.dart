@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-class navigator extends StatelessWidget {
+class NavigatorTest extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'navigator demo',
-      home: new page1(),
+      home: new Page1(),
     );
   }
 }
 
-class page1 extends StatelessWidget{
+class Page1 extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return new Scaffold(
@@ -20,7 +20,7 @@ class page1 extends StatelessWidget{
               child:Text('子页面'),
               onPressed: (){
                 Navigator.push(context,new  MaterialPageRoute(
-                    builder:(context) =>new page2())
+                    builder:(context) =>new Page2())
                 );
               },
             )
@@ -29,7 +29,7 @@ class page1 extends StatelessWidget{
   }
 }
 
-class page2 extends StatelessWidget{
+class Page2 extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Scaffold(
