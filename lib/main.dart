@@ -8,8 +8,15 @@ import 'layout2.dart';
 
 void main(){
   runApp(MaterialApp(
-      title:'welcome to flutter',
-      home:MyApp()
+    title:'welcome to flutter',
+    home:MyApp(),
+    routes: {
+      '/initExample': (BuildContext context) => InitProject(),
+      '/example01': (BuildContext context) => Example01(),
+      '/layout': (BuildContext context) => Layout(),
+      '/layout2': (BuildContext context) => Layout2(),
+      '/navigator': (BuildContext context) => ChildPage(),
+    },
   ));
 }
 
@@ -30,11 +37,11 @@ class MyApp extends StatelessWidget{
       crossAxisSpacing: 10.0, // 副轴/此处水平 方向间距
       crossAxisCount: 4, // 每行数量
       children:[
-        navigatorButton(context, 'initExample', InitProject()),
-        navigatorButton(context, 'example01', Example01()),
-        navigatorButton(context, 'layout', Layout()),
-        navigatorButton(context, 'layout2', Layout2()),
-        navigatorButton(context, 'navigator', ChildPage()),
+        navigatorButton(context, 'initExample'),
+        navigatorButton(context, 'example01'),
+        navigatorButton(context, 'layout'),
+        navigatorButton(context, 'layout2'),
+        navigatorButton(context, 'navigator'),
       ],
     );
   }
