@@ -30,18 +30,18 @@ class MyApp extends StatelessWidget{
       crossAxisSpacing: 10.0, // 副轴/此处水平 方向间距
       crossAxisCount: 4, // 每行数量
       children:[
-        navigatorButton(context, 'initExample', initProject()),
-        navigatorButton(context, 'example01', example01()),
-        navigatorButton(context, 'layout', layout()),
-        navigatorButton(context, 'layout2', layout2()),
-        navigatorButton(context, 'navigator', childPage()),
+        navigatorButton(context, 'initExample', InitProject()),
+        navigatorButton(context, 'example01', Example01()),
+        navigatorButton(context, 'layout', Layout()),
+        navigatorButton(context, 'layout2', Layout2()),
+        navigatorButton(context, 'navigator', ChildPage()),
       ],
     );
   }
 }
 
 // navigator
-class childPage extends StatelessWidget{
+class ChildPage extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Scaffold(
