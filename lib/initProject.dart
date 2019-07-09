@@ -59,4 +59,4 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-//void main() => runApp(new initProject());
+//void main() => runApp(initProject());
