@@ -33,6 +33,7 @@ class MyApp extends StatelessWidget{
         navigatorButton(context, 'initExample', initProject()),
         navigatorButton(context, 'example01', example01()),
         navigatorButton(context, 'layout', layout()),
+        navigatorButton(context, 'layout2', layout2()),
         navigatorButton(context, 'navigator', childPage()),
       ],
     );
