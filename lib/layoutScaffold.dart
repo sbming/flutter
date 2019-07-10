@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class Layout2 extends StatelessWidget {
+class LayoutScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'layout demo',
+      title: 'layout Scaffold',
       home: new LayoutFulWidge(),
     );
   }
@@ -14,9 +14,9 @@ class LayoutFulWidge extends StatefulWidget{
  @override
  layoutDrawer createState() => layoutDrawer();
 }
-
 class layoutDrawer extends State{
   @override
+  // 构造
   var _currentIndex = 1;
   var pageText = '这是联系人页面';
   Widget build(BuildContext context){
@@ -30,7 +30,7 @@ class layoutDrawer extends State{
             onPressed: () => Scaffold.of(context).openDrawer(),
           )
         ),
-        title:Text('layout demo',)
+        title:Text('layout Scaffold',)
       ),
       body:Center(
         child: Text(pageText),
@@ -40,11 +40,12 @@ class layoutDrawer extends State{
       drawer: Drawer(
         child: Column(
           children: <Widget>[
-            DrawerItem(1, '列表1'),
-            DrawerItem(2, '列表2'),
-            DrawerItem(3, '列表3'),
-            DrawerItem(4, '列表4'),
-            DrawerItem(5, '列表5')
+            DrawerItem(57529, 0xFF00BCB6, '合同管理'),
+            DrawerItem(57955, 0xFFFBC015, '资金管理'),
+            DrawerItem(59471, 0xFFB043F7, '我的授信'),
+            DrawerItem(58727, 0xFF557FDC, '收货地址'),
+            DrawerItem(57670, 0xFF508EEF, '我的关注'),
+            DrawerItem(57958, 0xFF5CD7A4, '消息中心'),
           ],
         ),
       ),
@@ -77,11 +78,20 @@ class layoutDrawer extends State{
   }
 }
 
+class HeardImg extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Stack();
+  }
+}
+
 class DrawerItem extends StatelessWidget {
-  final int id;
+  final int iconCode;
+  final int colorCode;
   final String name;
   // 构造
-  DrawerItem(this.id, this.name);
+  DrawerItem(this.iconCode, this.colorCode, this.name,);
 
   @override
   Widget build(BuildContext context) {
@@ -90,14 +100,21 @@ class DrawerItem extends StatelessWidget {
         color: Colors.white,
         border: Border(bottom: BorderSide(width: 0.5, color: Color(0xFFd9d9d9))),
       ),
-      height: 52.0,
+      height: 42.0,
       child: FlatButton(
-        onPressed: () => debugPrint('$name pressed.'),
+        onPressed: () {
+          debugPrint('$name pressed.');
+        },
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[Text('$id-$name'),],
+          children: <Widget>[
+            Icon(IconData(iconCode, fontFamily: 'MaterialIcons'), color: Color(colorCode),),
+            Text(' $name'),
+          ],
         )
       ),
     );
   }
 }
+
+//void main() => runApp(LayoutScaffold());

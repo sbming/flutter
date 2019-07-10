@@ -4,7 +4,9 @@ import 'components/navigatorButton.dart';
 import 'initProject.dart';
 import 'example01.dart';
 import 'layout.dart';
-import 'layout2.dart';
+import 'layoutScaffold.dart';
+import 'layoutStack.dart';
+import 'stateMng.dart';
 
 void main(){
   runApp(MaterialApp(
@@ -14,8 +16,10 @@ void main(){
       '/initExample': (BuildContext context) => InitProject(),
       '/example01': (BuildContext context) => Example01(),
       '/layout': (BuildContext context) => Layout(),
-      '/layout2': (BuildContext context) => Layout2(),
+      '/layoutScaffold': (BuildContext context) => LayoutScaffold(),
+      '/layoutStack': (BuildContext context) => LayoutStack(),
       '/navigator': (BuildContext context) => ChildPage(),
+      '/stateMng': (BuildContext context) => StateMng(),
     },
   ));
 }
@@ -40,8 +44,10 @@ class MyApp extends StatelessWidget{
         navigatorButton(context, 'initExample'),
         navigatorButton(context, 'example01'),
         navigatorButton(context, 'layout'),
-        navigatorButton(context, 'layout2'),
+        navigatorButton(context, 'layoutScaffold'),
+        navigatorButton(context, 'layoutStack'),
         navigatorButton(context, 'navigator'),
+        navigatorButton(context, 'stateMng'),
       ],
     );
   }

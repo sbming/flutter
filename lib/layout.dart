@@ -79,4 +79,4 @@ layoutBtn(text, btnColor) {
   );
 }
 
-//void main() => runApp(layout());
+//void main() => runApp(Layout());
